@@ -1,6 +1,7 @@
 <div>
     <table class="table">
       <tr>
+        <th scope="col">Id:</th>
         <th scope="col">Age:</th>
         <th scope="col">Height:</th>
         <th scope="col">Weight:</th>
@@ -12,11 +13,12 @@
         *ngFor="let record of histBmi;"
         class="table-success"
       >
-        <th scope="row">{{ i + 1 }}</th>
+        <th scope="row">{{ i }}</th>
         <td>{{ record.age }}</td>
         <td>{{ record.height }}</td>
         <td>{{ record.weight }}</td>
         <td>{{ record.i }}</td>
+        
       </tr>
 
   </table>
