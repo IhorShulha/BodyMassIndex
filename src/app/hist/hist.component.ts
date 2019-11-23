@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from '../user';
+import { Hist } from '../hist';
 
 @Component({
   selector: 'app-hist',
@@ -7,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HistComponent implements OnInit {
 
-  constructor() { }
+  constructor(private Hist: Hist) { }
 
+  histBmi: User[];
   ngOnInit() {
+    this.histBmi = this.Hist.getHist();
   }
 
 }

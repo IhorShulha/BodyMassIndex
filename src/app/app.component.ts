@@ -27,7 +27,7 @@ export class AppComponent {
       ).toFixed(1);
 
       this.Hist.addBmi(
-        new User(this.userHeight, this.userWeight, i)
+        new User(this.userAge, this.userHeight, this.userWeight, i)
       );
       this.histBmi = this.Hist.getHist();
 

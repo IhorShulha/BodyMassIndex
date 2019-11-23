@@ -1,14 +1,23 @@
 <div>
-    <h2>View History:</h2>
-    <div class="row">
-      <div class="col-xs-3">Age:</div>
-      <div class="col-xs-9">{{ userAge }}</div>
-    </div>
-    <div class="row">
-      <div class="col-xs-3">Height:</div>
-      <div class="col-xs-9">{{ userHeight }}</div>
-    </div>
-    <div class="row">
-      <div class="col-xs-3">Weight:</div>
-      <div class="col-xs-9">{{ userWeight }}</div>
+    <table class="table">
+      <tr>
+        <th scope="col">Age:</th>
+        <th scope="col">Height:</th>
+        <th scope="col">Weight:</th>
+        <th scope="col">BMI:</th>
+      </tr>
+
+    
+      <tr
+        *ngFor="let record of histBmi;"
+        class="table-success"
+      >
+        <th scope="row">{{ i + 1 }}</th>
+        <td>{{ record.age }}</td>
+        <td>{{ record.height }}</td>
+        <td>{{ record.weight }}</td>
+        <td>{{ record.i }}</td>
+      </tr>
+
+  </table>
   </div>
